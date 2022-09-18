@@ -31,11 +31,11 @@ String password = request.getParameter("pass");
  */
  
   // 問② EmployeeServiceクラスをインスタンス化する。
-EmployeeService emps = new EmployeeService();
+EmployeeService service = new EmployeeService();
   // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
-EmployeeBean employeebean = emps.search(id, password);
+EmployeeBean employeeBean = service.search(id, password);
   // 問④ nullの部分に適切な引数をセットする。
- request.setAttribute("EmployeeBean", employeebean);
+ request.setAttribute("EmployeeBean", employeeBean);
  
  } catch (Exception e) {
  e.printStackTrace();
